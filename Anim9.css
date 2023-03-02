@@ -1,0 +1,75 @@
+*
+{
+	box-sizing: border-box;
+}
+body
+{
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: black;
+	overflow: hidden;
+}
+.hove
+{
+	position: relative;
+	width: 30%;
+	height: 20%;
+	border: 4px solid white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
+	color: black;
+	font-size: 3rem;
+	overflow: hidden;
+}
+h1
+{
+	text-align: center;
+}
+.hove::before
+{
+	content: "Hoverable";
+	font-size: 5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	color: white;
+	transform: translateX(0);
+	transition-property:transform;
+	transition-duration: 1s;
+}
+.hove:hover:before
+{
+	color: lightgray;
+	transform: translateX(100%) scale(0.2) rotateY(360deg);
+	/*opacity: 0.1;*/
+}
+.hove::after
+{
+	content: "Hoverable";
+	font-size: 5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	color: white;
+	transform: translateX(0);
+	transition-property:transform;
+	transition-duration: 1s;
+}
+.hove:hover:after
+{
+	color: lightgray;
+	transform: translateX(-100%) scale(0.2) rotateY(-360deg);
+	/*opacity: 0.1;*/
+}

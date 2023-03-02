@@ -1,0 +1,41 @@
+*
+{
+	box-sizing: border-box;
+}
+body
+{
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.hove
+{
+	position: relative;
+	border: 4px solid lightgray;
+	width: 30%;
+	height: 20%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	background-color: black;
+	color: white;
+}
+h1
+{
+	text-align: center;
+}
+.hove::before
+{
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	transition: background-color;
+	transition-property: background-color;
+}
+.hove:hover::before
+{
+	background-color: darkred;
+}
