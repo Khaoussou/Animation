@@ -1,0 +1,61 @@
+*
+{
+	box-sizing: border-box;
+}
+.contenaire
+{
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50%;
+	height: 100vh;
+}
+.bloc1
+{
+	position: relative;
+	overflow: hidden;
+	border: 0.6rem solid lightgray;
+	padding: 2rem;
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: indianred;
+	font-size: 3rem;
+}
+.bloc1::after
+{
+	content: "";
+	position: absolute;
+	transform: rotate(90deg);
+	width: 100%;
+	height: 100%;
+	transition-duration: 5s;
+	transform-origin: right bottom;
+	right: 0;
+}
+.bloc1:hover::after
+{
+	color: white;
+	background-color: darkred;
+	opacity: 0.5;
+	transform: rotate(0);
+}
+.bloc1::before
+{
+	content: "";
+	position: absolute;
+	transform: rotate(-90deg);
+	transition-duration: 5s;
+	width: 100%;
+	height: 100%;
+	transform-origin: left bottom;
+}
+.bloc1:hover::before
+{
+	color: white;
+	background-color: darkred;
+	opacity: 0.5;
+	transform: rotate(0);
+}
