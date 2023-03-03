@@ -35,7 +35,6 @@ body
 {
 	color: yellow;
 	transition-duration: 2s;
-	background-color: white;
 }
 .sen::before
 {
