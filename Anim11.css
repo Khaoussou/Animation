@@ -1,0 +1,87 @@
+*
+{
+	box-sizing: border-box;
+}
+body
+{
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.sen
+{
+	position: relative;
+	width: 30%;
+	height: 20%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: bold;
+	color: white;
+	text-transform: uppercase;
+	padding: 1%;
+	background-color: white;
+
+}
+.sn
+{
+	text-align: center;
+	font-size: 5rem;
+	z-index: 3;
+	transition-duration: 2s;
+}
+.sn:hover
+{
+	color: yellow;
+	transition-duration: 2s;
+	background-color: white;
+}
+.sen::before
+{
+	content: "";
+	position: absolute;
+	border: 4px solid darkgreen;
+	width: 105%;
+	height: 105%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: darkgreen;
+	top: -9.4%;
+	left: -6.4%;
+	z-index: 2;
+	opacity: 0.7;
+	transition-duration: 2s;
+	/*transition-property: top;*/
+}
+.sen:hover:before
+{
+	transform-origin: top;
+	color: yellow;
+	transform: perspective(1500px) rotateX(80deg);
+}
+.sen::after
+{
+	content: "";
+	text-transform: uppercase;
+	font-size: 3rem;
+	position: absolute;
+	border: 4px solid red;
+	width: 105%;
+	height: 105%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: red;
+	bottom: -9.4%;
+	right: -6.4%;
+	opacity: 0.8;
+	transition-duration: 2s;
+}
+.sen:hover:after
+{
+	transform-origin: bottom;
+	color: yellow;
+	transform: perspective(1500px) rotateX(-80deg);
+}
