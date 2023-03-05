@@ -1,0 +1,381 @@
+*
+{
+	box-sizing: border-box;
+}
+body
+{
+	height: 90vh;
+}
+.contenaire
+{
+	width: 100%;
+	height: 100%;
+	background-color: white;
+}
+.tete
+{
+	position: relative;
+	height: 15vh;
+	background-color: rgba(0, 0, 0, 0.8);
+	padding: 3%;
+	width: 100%;
+}
+.poursuite
+{
+	margin-left: 5%;
+	position: fixed;
+	margin-top: -2%;
+	width: 100%;
+	height: 5rem;
+	border-radius: 50%;
+	border-right-color: rgba(0, 0, 0, 0.001);
+	animation: deplacement 15s infinite;
+}
+.poursuite::before
+{
+	content: "";
+	position: absolute;
+	left: -5%;
+	width: 5%;
+	height: 50%;
+	border-radius: 20rem 20rem 0 0;
+	background-color: yellow;
+	animation: mouvement 1s infinite;
+}
+.poursuite::after
+{
+	content: "";
+	position: absolute;
+	left: -5%;
+	top: 50%;
+	width: 5%;
+	height: 50%;
+	border-radius: 0 0 20rem 20rem;
+	background-color: yellow;
+	animation: mouvement1 1s infinite;
+}
+.point
+{
+	border-bottom: 15px dotted white;
+	width: 100%;
+}
+.voleur
+{
+	position: fixed;
+	margin-top: -3%;
+	width: 7%;
+	height: 6rem;
+	background-color: #ab1597;
+	margin-left: 10%;
+	border-radius: 30%;
+	animation: deplacement 15s infinite;
+	box-shadow: 0 0.2rem 0.1rem 0.1rem #ab1597;
+}
+.voleur::after
+{
+	content: "";
+	position: absolute;
+	bottom: -1.5rem;
+	width: 100%;
+	height: 2rem;
+	transform: rotate(180deg);
+	background: linear-gradient(-45deg,transparent 33.333%,
+					#ab1597 50%,
+					#ab1597 50%,
+					transparent 66.667%), 
+				linear-gradient(45deg,transparent 33.333%,
+					#ab1597 50%,
+					#ab1597 50%,
+					transparent 66.667%); 
+	background-size: 20px 40px;
+
+}
+.rond1
+{
+	padding: 3%;
+	margin-left: 10%;
+	width: 80%;
+	height: 3rem;
+	display: flex;
+	justify-content: center;
+	gap: 2rem;
+}
+.rond-blanc1
+{
+	margin-top: 2%;
+	width: 40%;
+	height: 2.8rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
+	border-radius: 50%;
+
+}
+.point-noir1,.point-noir2
+{
+	animation: mouve .4s infinite;
+	width: 50%;
+	height: 1.5rem;
+	border-radius: 50%;
+	background-color: blue;
+}
+.point-noir2
+{
+	animation: mouve1 .4s .5s infinite;
+	background-color: red;
+}
+/*.fin
+{
+	margin-top: 5%;
+	background-color: blue;
+	width: 100%;
+	height: 2.6rem;
+}*/
+.corps
+{
+	position: relative;
+	height: 55%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 2% ;
+}
+.tet1
+{
+	margin-top: 10%;
+	width: 18%;
+	height: 70%;
+	border-radius: 50%;
+	box-shadow: inset 0 0 0.9rem 0.7rem darkorange;
+	background-color: #f0c546;
+}
+.tet
+{
+	margin-top: 6%;
+	padding: 15%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	gap: 13%;
+	background-color: #f5f4a;
+}
+.rond-blanc,.rond3
+{
+	margin-top: 10%;
+	display: flex;
+	justify-content: center;
+	padding: 5%;
+	width: 70%;
+	height: 6rem;
+	border-radius: 50%;
+	background-color: white;
+	box-shadow: inset 0 0 0.7rem 0.2rem rgba(0, 0, 0, 0.8);
+	gap: 5%;
+}
+.rond-blanc
+{
+	animation: rotation .4s infinite;
+}
+.point-noir
+{
+	display: flex;
+	margin-top: -13%;
+	width: 50%;
+	height: 2.5rem;
+	border-radius: 50%;
+	background-color: black;
+}
+.bouche
+{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-left: 35%;
+	width: 30%;
+	height: 1.5rem;
+	border-radius: 2rem;
+	background-color: rgba(0, 0, 0, 0.4);
+	box-shadow: inset 0 0 0.7rem 0.2rem rgba(0, 0, 0, 0.8);
+}
+.psst
+{
+	position: relative;
+	width: 80%;
+	height: 3rem;
+	border-radius: 50%;
+	background-color: #f0c546;
+	overflow: hidden;
+}
+.psst::before
+{
+	content: "";
+	position: absolute;
+	left: -2%;
+	top: 40%;
+	width: 100%;
+	height: 4rem;
+	border:4px solid;
+	border-radius: 50%;
+	border-color: rgba(0, 0, 0, 0.8);
+	box-shadow: inset 0 0 0.7rem 0.2rem rgba(0, 0, 0, 0.9);	
+}
+.rond3
+{
+	margin-top: -5%;
+	align-items: center;
+}
+.bouche1
+{
+	position: relative;
+	margin-top: -10%;
+	margin-left: 25%;
+	width: 50%;
+	height: 20%;
+	border-radius: 50%;
+}
+.bouche1::before
+{
+	content: "";
+	position: absolute;
+	left: -8%;
+	top: -45%;
+	width: 110%;
+	height: 6rem;
+	border-top: transparent;
+	border-left: transparent;
+	border-right:transparent;
+	border-bottom: 50px solid rgba(0, 0, 0, 0.7);
+	border-radius: 50%;
+}
+.bouche1::after
+{
+	content: "";
+	position: absolute;
+	left: 25%;
+	top: 120%;
+	width: 50%;
+	height: 5.5rem;
+	border-radius: 0 50% 50% 0;
+	border-color: rgba(0, 0, 0, 0.8);
+	background-color: #e86181;
+	overflow: hidden;
+	transform: perspective(1500px) rotate(90deg);
+}
+.oeil
+{
+	width: 15%;
+	height: 3rem;
+	border: 4px solid;
+	border-radius: 50%;
+	background-color: rgba(0, 0, 0, 0.4);
+	box-shadow: inset 0 0 0.7rem 0.2rem rgba(0, 0, 0, 0.8);
+}
+.bouch3
+{
+	position: relative;
+	left: 25%;
+	width: 50%;
+	height: 3rem;
+	border-radius: 50%;
+	background-color: #f0c546;
+	/*overflow: hidden;*/
+}
+.bouch3::before
+{
+	content: "";
+	position: absolute;
+	left: %;
+	top: %;
+	width: 100%;
+	height: 10rem;
+	border-bottom: transparent;
+	border-left: transparent;
+	border-right:transparent;
+	border-top: 15px solid rgba(0, 0, 0, 0.7);
+	border-radius: 50%;
+}
+@keyframes mouve
+{
+	0%
+	{
+		rotate: -60deg;
+	}
+	50% 
+	{
+		rotate: 60deg;
+	}
+	100%
+	{
+		rotate: -60deg;
+	}
+}
+@keyframes mouve1
+{
+	0%
+	{
+		rotate: 60deg;
+	}
+	50% 
+	{
+		rotate: -60deg;
+	}
+	100%
+	{
+		rotate: 60deg;
+	}
+}
+@keyframes mouvement
+{
+	0%
+	{
+		rotate: -30deg;
+	}
+	50% 
+	{
+		rotate: 0deg;
+	}
+	100%
+	{
+		rotate: -30deg;
+	}
+}
+@keyframes mouvement1
+{
+	0%
+	{
+		rotate: 30deg;
+	}
+	50% 
+	{
+		rotate: 0deg;
+	}
+	100%
+	{
+		rotate: 30deg;
+	}
+}
+@keyframes deplacement
+{
+	0%
+	{
+		left: 0;
+	}
+	100%
+	{
+		left: 100%;
+	}
+}
+@keyframes rotation
+{
+	from
+	{
+		rotate: 0deg;
+	}
+	to
+	{
+		rotate: 360deg;
+	}
+}
